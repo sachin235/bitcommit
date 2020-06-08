@@ -17,8 +17,8 @@ export GIT_USER_UPSTREAM=#your-user
 #### DO NOT EDIT BELOW THIS LINE: derived variables
 ############################################################################
 
-export GIT_REMOTE_URL=git@github.com:$GIT_USER/$GIT_REPO_NAME.git
-export GIT_REMOTE_URL_HTTPS=https://github.com/$GIT_USER/$GIT_REPO_NAME.git
+export GIT_REMOTE_URL=git@bitbucket.org:$GIT_USER/$GIT_REPO_NAME.git
+export GIT_REMOTE_URL_HTTPS=https://bitbucket.org/$GIT_USER/$GIT_REPO_NAME.git
 export GIT_REMOTE_UPSTREAM=$GIT_USER_UPSTREAM/$GIT_REPO_NAME
 
 
