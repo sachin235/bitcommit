@@ -3,7 +3,7 @@ define(['base/js/namespace','base/js/dialog','jquery'],function(IPython, dialog,
     // we will define an action here that should happen when we ask to clear and restart the kernel.
     var git_commit_push  = {
         help: 'Commit current notebook and push to Bitbucket',
-        icon : 'fa-github',
+        icon : 'fa-bitbucket',
         help_index : '',
         handler : function (env) {
             var on_success = undefined;
