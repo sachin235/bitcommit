@@ -48,4 +48,7 @@ export Bitbucket_App_Password=`<app-password generated from Bitbucket user setti
 export GIT_USER_UPSTREAM=`<your Bitbucket username>` <br />
 
 
-<!-- ## Screenshots -->
+## Working Demo
+
+![Bitbucket Extension](https://user-images.githubusercontent.com/32926581/84199488-e4f72180-aac2-11ea-975f-706482b662ac.gif)
+
