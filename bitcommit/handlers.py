@@ -90,21 +90,7 @@ class GitCommitHandler(IPythonHandler):
             self.error_and_return(cwd, "Could not push to remote {}: {}".format(git_remote, pushed[0].summary))
             return
 
-        # open pull request
-        try:
-          github_url = "https://api.github.com/repos/{}/pulls".format(git_repo_upstream)
-          github_pr = {
-              "title":"{} Notebooks".format(git_user),
-              "body":"IPython notebooks submitted by {}".format(git_user),
-              "head":"{}:{}".format(git_user, git_remote),
-              "base":"master"
-          }
-          github_headers = {"Authorization": "token {}".format(git_access_token)}
-          r = requests.post(github_url, data=json.dumps(github_pr), headers=github_headers)
-          if r.status_code != 201:
-            print("Error submitting Pull Request to {}".format(git_repo_upstream))
-        except:
-            print("Error submitting Pull Request to {}".format(git_repo_upstream))
+
 
         # return to directory
         os.chdir(cwd)
@@ -116,4 +102,3 @@ class GitCommitHandler(IPythonHandler):
 def setup_handlers(nbapp):
     route_pattern = ujoin(nbapp.settings['base_url'], '/git/commit')
     nbapp.add_handlers('.*', [(route_pattern, GitCommitHandler)])
-
